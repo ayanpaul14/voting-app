@@ -1,0 +1,7 @@
+node_modules/
+.env
+voting-frontend/node_modules/
+voting-frontend/build/
+voting-frontend/.env
+temp_data.json
+blueprint.txt
