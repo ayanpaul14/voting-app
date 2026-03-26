@@ -1,0 +1,132 @@
+.results-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.results-header {
+    margin-bottom: 28px;
+}
+
+.results-header h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.results-header p {
+    color: #888;
+    font-size: 14px;
+}
+
+.leader-banner {
+    background: linear-gradient(135deg, #e94560, #c73652);
+    border-radius: 12px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.leader-label {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.leader-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.leader-party {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+}
+
+.leader-votes {
+    margin-left: auto;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.chart-card {
+    background: #16213e;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 28px;
+    border: 1px solid #1a4a7a;
+}
+
+.results-table {
+    background: #16213e;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #1a4a7a;
+}
+
+.results-table-header,
+.results-table-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr 80px 80px;
+    padding: 14px 20px;
+    align-items: center;
+    gap: 12px;
+}
+
+.results-table-header {
+    background: #0f3460;
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.results-table-row {
+    border-top: 1px solid #1a4a7a;
+    color: #ccc;
+    font-size: 14px;
+    transition: background 0.15s;
+}
+
+.results-table-row:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.rank {
+    color: #e94560;
+    font-weight: 700;
+}
+
+.result-name {
+    color: #fff;
+    font-weight: 500;
+}
+
+.result-party {
+    color: #888;
+}
+
+.result-votes {
+    font-weight: 600;
+    color: #fff;
+}
+
+.result-share {
+    color: #e94560;
+    font-weight: 600;
+}
+
+.results-error {
+    color: #e94560;
+    text-align: center;
+    margin-top: 80px;
+}

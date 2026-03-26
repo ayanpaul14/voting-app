@@ -1,0 +1,172 @@
+/* ── Base ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ── Cards ── */
+.profile-card,
+.password-card {
+    background: #1a2744;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* ── Avatar ── */
+.profile-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e05c7a;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.profile-card h2 {
+    text-align: center;
+    color: #fff;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    margin-bottom: 0.4rem;
+}
+
+/* ── Role badge ── */
+.profile-role {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 1.2rem;
+    padding: 0.25rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: #2a3a5e;
+    color: #a0b0d0;
+}
+
+.profile-role.admin { background: #3a1a2e; color: #e05c7a; }
+.profile-role.voter { background: #1a2a4e; color: #7090e0; }
+
+/* ── Detail rows ── */
+.profile-details { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #2a3a5e;
+}
+
+.detail-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.detail-label {
+    color: #7090b0;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #e0e8f0;
+    font-size: 0.875rem;
+    text-align: right;
+    word-break: break-word;
+    max-width: 60%;
+}
+
+.voted-yes { color: #4caf50; font-weight: 600; }
+.voted-no  { color: #f0a030; font-weight: 600; }
+
+/* ── Password card ── */
+.password-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+
+.form-group label { color: #7090b0; font-size: 0.875rem; }
+
+.form-group input {
+    background: #0f1a30;
+    border: 1px solid #2a3a5e;
+    border-radius: 8px;
+    color: #e0e8f0;
+    padding: 0.65rem 0.9rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e05c7a;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background: #e05c7a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-height: 48px; /* touch friendly */
+}
+
+.btn-primary:hover:not(:disabled) { background: #c0485e; }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Success / Error ── */
+.success-msg {
+    background: #1a3a2a;
+    color: #4caf50;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.error-msg {
+    background: #3a1a1a;
+    color: #e05c7a;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Tablet and up ── */
+@media (min-width: 640px) {
+    .profile-container {
+        max-width: 600px;
+        padding: 2rem 1.5rem;
+    }
+
+    .profile-avatar {
+        width: 88px;
+        height: 88px;
+        font-size: 2.4rem;
+    }
+
+    .detail-value { max-width: 70%; }
+}
